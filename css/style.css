@@ -10,10 +10,7 @@
 
 body{
 	margin: 0;
-	font-family: helvetica, sans-serif;
-	background-image: url("../images/home-back-image.png");
-	background-size: cover;
-	background-attachment: fixed;
+	font-family: 'Fira Sans', sans-serif;
 	line-height: 1.4;
 	color: var(--defTextColor);
 }
@@ -24,6 +21,23 @@ a{
 
 img{
 	max-width: 100%;
+}
+
+main{
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.home{
+	background-image: url("../images/home-back-image.png");
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.days-list{
+	padding: 0;
+	margin: 60px 0;
+	list-style: none;
 }
 
 .container{
@@ -68,7 +82,7 @@ img{
 		margin-left: 30px;
 	}
 
-	.masters__link{
+	.media__link{
 		display: block;
 		text-align: center;
 		text-decoration: none;
@@ -76,8 +90,8 @@ img{
 		padding: 30px;
 		transition: background-color 300ms;
 	}
-		.masters__link:before,
-		.masters__link:after{
+		.media__link:before,
+		.media__link:after{
 			content: "";
 			position: absolute;
 			display: block;
@@ -85,13 +99,13 @@ img{
 			height: 40px;
 		}
 
-		.masters__link:before{
+		.media__link:before{
 			border-top: solid 1px #fff;
 			border-right: solid 1px #fff;
 			top: 10px;
 			right: 10px;
 		}
-		.masters__link:after{
+		.media__link:after{
 			border-bottom: solid 1px #fff;
 			border-left: solid 1px #fff;
 			bottom: 10px;
@@ -99,25 +113,25 @@ img{
 		}
 
 
-		.masters__link:hover{
+		.media__link:hover{
 			background-color: var(--secondary);
 		}
 
-		.masters__link:hover .masters__image{
+		.media__link:hover .media__image{
 			transform: scale(0.8);
 			filter: grayscale(1);
 		}
 
-		.masters__link:hover .masters__title{
+		.media__link:hover .media__title{
 			color: var(--main);
 		}
 
-	.masters__image{
+	.media__image{
 		border-radius: 50%;
 		transition: transform 300ms;
 	}
 
-	.masters__title{
+	.media__title{
 		
 	}
 
