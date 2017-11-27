@@ -25,10 +25,12 @@ img{
 
 
 
-main{
+html:not(.instructores) main{
 	padding-top: 60px;
 	padding-bottom: 60px;
 }
+
+
 
 .home{
 	background-image: url("../images/home-back-image.png");
@@ -55,6 +57,7 @@ main{
 .header{
 	background-color: var(--main);
 	text-align: right;
+	height: 40px;
 }
 
 .menu{
@@ -148,10 +151,114 @@ main{
 	color: #fff;
 	padding: 10vh 0px;
 }
+
+.masters-slider{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	height: calc(100vh - 40px);
+}
+	
+	.withsubmenu .masters-slider{
+		height: calc(100vh - 80px);		
+	}
+
+	.masters-slider__item{
+		background-image: linear-gradient(to right, #ffffff 0%,#ffffff 30%,var(--defTextColor) 30%,var(--defTextColor) 100%); 
+		height: inherit;
+		width: 100%;
+	}
+		.masters-slider--dias .masters-slider__item{
+			background-image: linear-gradient(to right, #ffffff 0%,#ffffff 30%,var(--main) 30%,var(--main) 100%); 
+		}
+
+	.masters-slider__title{
+		font-weight: 100;
+		font-size: 40px;
+		margin: 0;
+	}
+
+	.masters-slider__content{
+		display: flex;
+		height: inherit;
+	}
+	.masters-slider__alpha{
+		width: 30%;
+		text-align: center;
+		background-color: #fff;
+		padding-top: 60px;
+	}
+	.masters-slider__beta{
+		width: 70%;
+		background-color: var(--defTextColor);
+		color: #fff;
+		padding: 60px 0 60px 80px;
+	}
+
+		.masters-slider--dias .masters-slider__beta{
+			background-color: var(--main);
+		}
+
+	#prev, #next{
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100px;
+		z-index: 1000;
+		color: #fff;
+		text-decoration: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 40px;
+	}
+	#prev{
+		left: 0;
+		background-image: linear-gradient(to right,#2B2B2B,transparent);
+	}
+	#next{
+		right: 0;
+		background-image: linear-gradient(to right,transparent,#2B2B2B);
+	}
+
+
+
+
+
+
 	.intro__image{
 		width: 55%;
 	}
 	.intro__text{
 		width: 40%;
 	}
+
+
+.submenu{
+	background-color: var(--defTextColor);
+	height: 40px;
+}
+.submenu__list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+}
+
+	.submenu__list a{
+		display: block;
+		padding: 10px 20px;
+		color: #ECEFDA;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+		.submenu__list a:hover{
+			color: #B9D1E9;
+		}
+
+
+
+
+
 
