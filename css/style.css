@@ -23,6 +23,8 @@ img{
 	max-width: 100%;
 }
 
+
+
 main{
 	padding-top: 60px;
 	padding-bottom: 60px;
@@ -32,6 +34,10 @@ main{
 	background-image: url("../images/home-back-image.png");
 	background-size: cover;
 	background-attachment: fixed;
+}
+
+.text-main{
+	color: var(--main);
 }
 
 .days-list{
@@ -118,8 +124,9 @@ main{
 		}
 
 		.media__link:hover .media__image{
-			transform: scale(0.8);
+			// transform: scale(0.8);
 			filter: grayscale(1);
+			border-radius: 0%;
 		}
 
 		.media__link:hover .media__title{
@@ -128,7 +135,7 @@ main{
 
 	.media__image{
 		border-radius: 50%;
-		transition: transform 300ms;
+		transition: transform 300ms, border-radius 300ms;
 	}
 
 	.media__title{
