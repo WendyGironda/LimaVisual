@@ -91,6 +91,9 @@ html:not(.instructores) main{
 		width: calc(33.3333% - 30px);
 		margin-left: 30px;
 	}
+	
+
+
 
 	.media__link{
 		display: block;
@@ -100,6 +103,12 @@ html:not(.instructores) main{
 		padding: 30px;
 		transition: background-color 300ms;
 	}
+
+		.days-list .media__link{
+			transform: scale(0.7);
+			transition: background-color 300ms, transform 300ms;
+		}
+
 		.media__link:before,
 		.media__link:after{
 			content: "";
@@ -127,6 +136,14 @@ html:not(.instructores) main{
 			background-color: var(--secondary);
 		}
 
+		.days-list .media__link:hover{
+			transform: scale(1);
+		}
+
+		.days-list .media__link:hover .media__title{
+			 transform: scale(1);
+		}
+
 		.media__link:hover .media__image{
 			// transform: scale(0.8);
 			filter: grayscale(1);
@@ -146,6 +163,10 @@ html:not(.instructores) main{
 		font-weight: 100;
 		text-transform: uppercase;
 	}
+		.days-list .media__title{
+			transform: scale(1.3);
+			transition: transform 300ms;
+		}
 		.media__title strong{
 			font-weight: 700;
 		}
@@ -299,7 +320,55 @@ html:not(.instructores) main{
 			color: #B9D1E9;
 		}
 
+.inscribete{
+	display: flex;
+}
 
+.inscribete__left,
+.inscribete__right{
+	cursor: pointer;
+	flex-grow: 0;
+}
+
+.inscribete__left{
+	background-color: #AFAFAF;
+	color: white;
+	padding: 5px 20px 5px 40px;
+	border-radius: 5px 0 0 5px;
+}
+
+.inscribete__center{
+	overflow: hidden;
+	display: flex;
+	width: 70%;
+	transition: width 300ms;
+}
+	.inscribete__center--collapsed{
+		width: 0;
+	}
+	.inscribete__center input,
+	.inscribete__center button{
+		flex-grow: 1;
+		border: none;
+		padding: 5px;
+		outline-color: transparent;
+		cursor: pointer;
+	}
+
+
+.inscribete__right,
+.inscribete__center button{
+	background-color: #AFAFAF;
+	color: white;
+	border-radius: 0 5px 5px 0;
+}
+
+.inscribete__right{
+	padding: 5px 20px 5px 20px;
+}
+.inscribete__center button{
+	padding: 5px 10px 5px 10px;
+}
 
 
 
