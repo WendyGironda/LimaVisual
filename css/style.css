@@ -370,6 +370,23 @@ html:not(.instructores) main{
 	padding: 5px 10px 5px 10px;
 }
 
+.contact-info{
+
+}
+	.contact-info h2{
+		text-align: center;
+	}
+.sponsors{
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	justify-content: space-between;
+}
+	.sponsors im{
+		max-width: 100%;
+	}
+
 
 
 
