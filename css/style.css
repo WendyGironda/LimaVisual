@@ -332,6 +332,7 @@ html:not(.instructores) main{
 
 .inscribete{
 	display: flex;
+	margin-top: 50px;
 }
 
 .inscribete__left,
