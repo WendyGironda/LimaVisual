@@ -1,8 +1,16 @@
 $(document).ready(function(){
-
-	window.addEventListener("load",function(){
-		$('#preloader').fadeOut('slow',function(){$(this).remove();});
-	});
+	// $(window).on("load",function(){
+	// 	$('#preloader').fadeOut('slow',function(){$(this).remove();});
+	// });
+	if(document.readyState === 'complete') {
+	    $('#preloader').remove();
+	}
+	var interval = setInterval(function() {
+	    if(document.readyState === 'complete') {
+	        clearInterval(interval);
+	        $('#preloader').fadeOut('slow',function(){$(this).remove();});
+	    }    
+	}, 100);
 
 	var dato = Number(sessionStorage.getItem('dato'));
 	//alert(dato);
