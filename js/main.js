@@ -1,4 +1,9 @@
 $(document).ready(function(){
+
+	window.addEventListener("load",function(){
+		$('#preloader').fadeOut('slow',function(){$(this).remove();});
+	});
+
 	var dato = Number(sessionStorage.getItem('dato'));
 	//alert(dato);
 	$(".masters-slider").cycle({
