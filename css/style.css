@@ -483,7 +483,7 @@ html:not(.instructores) main{
 	.inscribete__center button{
 		flex-grow: 1;
 		border: none;
-		padding: 5px;
+		padding: 5px 10px;
 		outline-color: transparent;
 		cursor: pointer;
 	}
@@ -492,7 +492,8 @@ html:not(.instructores) main{
 		.inscribete__center input,
 		.inscribete__center button{
 			margin: 3px 0;
-			border-radius: 5px;
+			border-radius: 5px !important;
+			padding: 10px;
 		}
 	}
 
@@ -513,15 +514,7 @@ html:not(.instructores) main{
 		}
 	}
 
-.inscribete__center button{
-	padding: 5px 10px 5px 10px;
-}
 
-	@media screen and (max-width: 767px){
-		.inscribete__center button{
-			border-radius: 5px;
-		}
-	}	
 
 
 .contact-info{
