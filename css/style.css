@@ -102,6 +102,7 @@ html:not(.instructores) main{
 		.menu{
 			align-items: center;
 			justify-content: center;
+			margin: 0 -15px;
 		}
 		.menu__link{
 			padding: 10px;
@@ -421,6 +422,9 @@ html:not(.instructores) main{
 		text-decoration: none;
 	}
 		@media screen and (max-width: 767px){
+			.submenu{
+				margin: 0 -15px;
+			}
 			.submenu__list a{
 				padding: 10px;
 			}
