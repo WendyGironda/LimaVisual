@@ -10,18 +10,21 @@ $(document).ready(function(){
 	        clearInterval(interval);
 	        $('#preloader').fadeOut('slow',function(){$(this).remove();});
 	    }    
-	}, 100);
+	}, 10);
 
-	var dato = Number(sessionStorage.getItem('dato'));
-	//alert(dato);
-	$(".masters-slider").cycle({
-        'fx' : "scrollHorz",
-        'slides' : "> li",
-        'timeout': 0,
-        'prev': "#prev",
-        'next': "#next",
-        'startingSlide': dato,
-    });
+	if( $(".masters-slider").length > 0 ){ 
+
+		var dato = Number(sessionStorage.getItem('dato'));
+		
+		$(".masters-slider").cycle({
+	        'fx' : "scrollHorz",
+	        'slides' : "> li",
+	        'timeout': 0,
+	        'prev': "#prev",
+	        'next': "#next",
+	        'startingSlide': dato,
+	    });
+	}
 
 	$(".inscribete__left, .inscribete__right").on("click", function(){
 		$(this).parent().find(".inscribete__center").removeClass("inscribete__center--collapsed");
