@@ -14,16 +14,21 @@ $(document).ready(function(){
 
 	if( $(".masters-slider").length > 0 ){ 
 
-		var dato = Number(sessionStorage.getItem('dato'));
+		if (window.matchMedia("(max-width: 767px)").matches) {
+		  $(".masters-slider").cycle("destroy");
+		} else {
+		 	var dato = Number(sessionStorage.getItem('dato')) || 0;
 		
-		$(".masters-slider").cycle({
-	        'fx' : "scrollHorz",
-	        'slides' : "> li",
-	        'timeout': 0,
-	        'prev': "#prev",
-	        'next': "#next",
-	        'startingSlide': dato,
-	    });
+			$(".masters-slider").cycle({
+		        'fx' : "scrollHorz",
+		        'slides' : "> li",
+		        'timeout': 0,
+		        'prev': "#prev",
+		        'next': "#next",
+		        'startingSlide': dato,
+		    });
+		} // else
+		
 	}
 
 	$(".inscribete__left, .inscribete__right").on("click", function(){

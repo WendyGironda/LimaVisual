@@ -85,6 +85,12 @@ html:not(.instructores) main{
 	.menu__item, .menu li{
 		height: 100%;
 	}
+		@media screen and (max-width: 767px){
+			.menu__item, .menu li{
+				width: 33.33%;
+				text-align: center;
+			}
+		}
 
 	.menu__link{
 		text-decoration: none;
@@ -252,11 +258,15 @@ html:not(.instructores) main{
 	list-style: none;
 	height: 100vh;
 }
-
-	
-	.withsubmenu .masters-slider{
-		height: 100vh;
+	@media screen and (max-width: 767px){
+		.masters-slider{
+			height: auto;
+		}
 	}
+	
+	/*.withsubmenu .masters-slider{
+		height: 100vh;
+	}*/
 
 	.masters-slider__item{
 		background-image: linear-gradient(to right, #ffffff 0%,#ffffff 30%,var(--defTextColor) 30%,var(--defTextColor) 100%); 
@@ -299,7 +309,7 @@ html:not(.instructores) main{
 		@media screen and (max-width: 767px){
 			.masters-slider__content{
 				flex-direction: column;
-				overflow: auto;
+				// overflow: auto;
 			}
 		}
 	.masters-slider__alpha{
@@ -379,7 +389,13 @@ html:not(.instructores) main{
 		right: 0;
 		background-image: linear-gradient(to right,transparent,#2B2B2B);
 	}
-
+	
+	@media screen and (max-width: 767px){
+		#prev, #next{
+			display: none;
+		}
+	}
+	
 
 
 .submenu{
@@ -401,6 +417,12 @@ html:not(.instructores) main{
 		text-transform: uppercase;
 		text-decoration: none;
 	}
+		@media screen and (max-width: 767px){
+			.submenu__list a{
+				padding: 10px;
+			}
+		}
+
 		.submenu__list a:hover, .submenu__list .active{
 			color: #B9D1E9;
 		}
@@ -409,6 +431,14 @@ html:not(.instructores) main{
 	display: flex;
 	margin-top: 50px;
 }
+
+	@media screen and (max-width: 767px){
+		.inscribete{
+			flex-direction: column;
+		}
+	}
+
+
 
 .inscribete__left,
 .inscribete__right{
@@ -422,6 +452,12 @@ html:not(.instructores) main{
 	padding: 5px 20px 5px 40px;
 	border-radius: 5px 0 0 5px;
 }
+	@media screen and (max-width: 767px){
+		.inscribete__left{
+			background-color: transparent;
+			padding: 0;
+		}
+	}
 
 .inscribete__center{
 	overflow: hidden;
@@ -429,9 +465,20 @@ html:not(.instructores) main{
 	width: 70%;
 	transition: width 300ms;
 }
+	@media screen and (max-width: 767px){
+		.inscribete__center{
+			width: auto;
+			flex-direction: column;
+		}
+	}
 	.inscribete__center--collapsed{
 		width: 0;
 	}
+		@media screen and (max-width: 767px){
+			.inscribete__center--collapsed{
+				width: auto;
+			}
+		}
 	.inscribete__center input,
 	.inscribete__center button{
 		flex-grow: 1;
@@ -439,6 +486,14 @@ html:not(.instructores) main{
 		padding: 5px;
 		outline-color: transparent;
 		cursor: pointer;
+	}
+
+	@media screen and (max-width: 767px){
+		.inscribete__center input,
+		.inscribete__center button{
+			margin: 3px 0;
+			border-radius: 5px;
+		}
 	}
 
 
@@ -452,9 +507,22 @@ html:not(.instructores) main{
 .inscribete__right{
 	padding: 5px 20px 5px 20px;
 }
+	@media screen and (max-width: 767px){
+		.inscribete__right{
+			display: none;
+		}
+	}
+
 .inscribete__center button{
 	padding: 5px 10px 5px 10px;
 }
+
+	@media screen and (max-width: 767px){
+		.inscribete__center button{
+			border-radius: 5px;
+		}
+	}	
+
 
 .contact-info{
 
